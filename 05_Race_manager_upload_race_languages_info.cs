@@ -20,7 +20,7 @@ namespace Races_libs
                         {
                             if (language == race_language)
                             {
-                                Race.Set_language_1_lvl(Race_languages_coloumn_name.IndexOf(race_language));
+                                Race.Set_language_1_lvl(Languages[Race_languages_coloumn_name.IndexOf(race_language)][_Races.IndexOf(Race)]);
                             }
                         }
                     }

@@ -14,6 +14,7 @@
             SQLite_connection.Close();
 
             Upload_general_info();       // Перекладываем считанные данные в конфигурационные поля объектов рас 
+            Upload_languages_info();
         }
     }
 }

@@ -32,8 +32,8 @@ namespace Races_libs
             SQLite_Command_text = "SELECT * FROM Race_general ORDER BY ID";
             SQLite_command = new SQLiteCommand(SQLite_Command_text,SQLite_connection);
 
-            while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
-                                                   // находимся до тех пор, пока не закроется 
+            //while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
+            // находимся до тех пор, пока не закроется 
 
             SQLite_reader = SQLite_command.ExecuteReader();
 
