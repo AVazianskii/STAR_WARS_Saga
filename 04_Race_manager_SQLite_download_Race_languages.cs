@@ -37,47 +37,53 @@ namespace Races_libs
 
         private void Run_download_race_languages()
         {
-            SQLite_Command_text = "SELECT * FROM Race_languages ORDER BY ID";
-            SQLite_command = new SQLiteCommand(SQLite_Command_text, SQLite_connection);
-
-            //while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
-            // находимся до тех пор, пока не закроется 
-
-            SQLite_reader = SQLite_command.ExecuteReader();
-
-            first_run = true;
-
-            while(SQLite_reader.Read()) 
+            if (SQLite_reader != null)
             {
-                if (first_run)
-                {
-                    for (int i = 0; i < SQLite_reader.FieldCount; i++)
-                    {
-                        Race_languages_coloumn_name.Add(SQLite_reader.GetName(i));
-                    }
-                    Race_languages_coloumn_name.RemoveAt(0); // удаояем название столбца ID
-                    Race_languages_coloumn_name.RemoveAt(0); // удаояем название столбца Название расы
-                    first_run = false;
-                }
-                int index;
-                index = 0;
+                while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
+                // находимся до тех пор, пока не закроется 
 
-                // Здесь такая реализация, потому что на каждый столбец идет считывание всех строк, относящихся к этому столбцу
-                foreach (string coloumn_name in Race_languages_coloumn_name)
-                {
-                    temp_object = SQLite_reader[coloumn_name];
+            }
+            if (SQLite_reader == null || SQLite_reader.IsClosed)
+            {
+                SQLite_Command_text = "SELECT * FROM Race_languages ORDER BY ID";
+                SQLite_command = new SQLiteCommand(SQLite_Command_text, SQLite_connection);
 
-                    for (;index < Languages.Capacity;)
+                SQLite_reader = SQLite_command.ExecuteReader();
+
+                first_run = true;
+
+                while (SQLite_reader.Read())
+                {
+                    if (first_run)
                     {
-                        if (!(temp_object is DBNull)) { Languages[index].Add(Convert.ToInt32(temp_object)); } else { Languages[index].Add(0); }
-                        break;
+                        for (int i = 0; i < SQLite_reader.FieldCount; i++)
+                        {
+                            Race_languages_coloumn_name.Add(SQLite_reader.GetName(i));
+                        }
+                        Race_languages_coloumn_name.RemoveAt(0); // удаояем название столбца ID
+                        Race_languages_coloumn_name.RemoveAt(0); // удаояем название столбца Название расы
+                        first_run = false;
                     }
-                    index = index + 1;
-                    if (index == Languages.Capacity)
+                    int index;
+                    index = 0;
+
+                    // Здесь такая реализация, потому что на каждый столбец идет считывание всех строк, относящихся к этому столбцу
+                    foreach (string coloumn_name in Race_languages_coloumn_name)
                     {
-                        break;
+                        temp_object = SQLite_reader[coloumn_name];
+
+                        for (; index < Languages.Capacity;)
+                        {
+                            if (!(temp_object is DBNull)) { Languages[index].Add(Convert.ToInt32(temp_object)); } else { Languages[index].Add(0); }
+                            break;
+                        }
+                        index = index + 1;
+                        if (index == Languages.Capacity)
+                        {
+                            break;
+                        }
+
                     }
-                    
                 }
             }
         }
