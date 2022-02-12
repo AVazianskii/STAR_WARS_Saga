@@ -59,6 +59,7 @@ namespace Races_libs
             Feature_4 = new List<string>();
             Feature_5 = new List<string>();
             Feature_6 = new List<string>();
+            Feature_7 = new List<string>();
             #endregion
             #region инициализация коллекции описаний рас
             Race_description = new List<List<string>>();
@@ -76,6 +77,7 @@ namespace Races_libs
             Race_description.Add(Feature_4);
             Race_description.Add(Feature_5);
             Race_description.Add(Feature_6);
+            Race_description.Add(Feature_7);
             #endregion
             #region инициализация уровней знания языков рас
             Galactic_lang = new List<int>();
@@ -121,6 +123,7 @@ namespace Races_libs
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
             //SQLite_reader = new SQLiteDataReader();
 
+            Race_general_info_coloumn_name = new List<string>();
             Race_languages_coloumn_name = new List<string>();
 
             //Run_download_and_upload_process();

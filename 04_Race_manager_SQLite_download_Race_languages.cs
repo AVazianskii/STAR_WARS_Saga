@@ -6,9 +6,6 @@ namespace Races_libs
 {
     public partial class Race_manager
     {
-        #region инициализация коллекции столбцов в таблице по уровням знания языков у рас
-        public List<string> Race_languages_coloumn_name;
-        #endregion
         #region инициализация переменных
         private List<int> Galactic_lang;
         private List<int> Botan_lang;
@@ -27,10 +24,8 @@ namespace Races_libs
         private List<int> Trando_lang;
         private List<int> Sullu_lang;
         private List<int> Zabrak_lang;
-        #endregion
-
-        #region инициализация коллекции различных языков
-        public List<List<int>> Languages;
+        private List<List<int>> Languages; // инициализация коллекции различных языков
+        private List<string> Race_languages_coloumn_name; // инициализация коллекции столбцов в таблице по уровням знания языков у рас
         #endregion
 
         bool first_run;
@@ -65,7 +60,8 @@ namespace Races_libs
                         first_run = false;
                     }
                     int index;
-                    
+                    object temp_object;
+
                     // Здесь такая реализация, потому что на каждый столбец идет считывание всех строк, относящихся к этому столбцу
                     foreach (string coloumn_name in Race_languages_coloumn_name)
                     {
