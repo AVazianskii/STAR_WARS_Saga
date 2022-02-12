@@ -121,12 +121,11 @@ namespace Races_libs
 
             SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Races_Libs\SW_Race_manager\Races.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
-            //SQLite_reader = new SQLiteDataReader();
-
+            
             Race_general_info_coloumn_name = new List<string>();
             Race_languages_coloumn_name = new List<string>();
 
-            //Run_download_and_upload_process();
+            
         }
     }
 }

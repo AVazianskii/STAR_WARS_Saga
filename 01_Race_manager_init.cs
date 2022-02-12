@@ -31,14 +31,57 @@ namespace Races_libs
 
         #region переменные для обращения к базе SQLite
         private string SQLite_connection_string;
-        private string SQLite_Command_text;
-
         private SQLiteConnection SQLite_connection;
-        private SQLiteCommand SQLite_command;
-        private SQLiteDataReader SQLite_reader;
+        #endregion
+        enum Type_of_var
+        {
+            string_type,
+            int_type
+        }
+        #region инициализация коллекции коллекций общего описания рас
+        private List<List<string>> Race_description;
+        private List<string> Race_general_info_coloumn_name;
+        #endregion
+        #region инициализация коллекций общего описания рас
+        private List<string> General_description;
+        private List<string> Personal_properties;
+        private List<string> Physical_properties;
+        private List<string> Home_world;
+        private List<string> Language_1;
+        private List<string> Language_2;
+        private List<string> Language_3;
+        private List<string> Language_4;
+        private List<string> Feature_1;
+        private List<string> Feature_2;
+        private List<string> Feature_3;
+        private List<string> Feature_4;
+        private List<string> Feature_5;
+        private List<string> Feature_6;
+        private List<string> Feature_7;
+
+
         #endregion
 
-        #region
+        #region инициализация коллекций языков рас
+        private List<int> Galactic_lang;
+        private List<int> Botan_lang;
+        private List<int> Cerenian_lang;
+        private List<int> Duro_lang;
+        private List<int> Evok_lang;
+        private List<int> Gamor_lang;
+        private List<int> Gungan_lang;
+        private List<int> Rodian_lang;
+        private List<int> Hatt_lang;
+        private List<int> Ril_lang;
+        private List<int> Leku_lang;
+        private List<int> Wooki_lang;
+        private List<int> Kel_dor_lang;
+        private List<int> Mon_kalamari_lang;
+        private List<int> Trando_lang;
+        private List<int> Sullu_lang;
+        private List<int> Zabrak_lang;
+        private List<List<int>> Languages; // инициализация коллекции различных языков
+        private List<string> Race_languages_coloumn_name; // инициализация коллекции столбцов в таблице по уровням знания языков у рас
         #endregion
     }
 }
