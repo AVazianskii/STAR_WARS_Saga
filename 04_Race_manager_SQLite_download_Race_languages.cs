@@ -37,15 +37,15 @@ namespace Races_libs
 
         private void Run_download_race_languages()
         {
-            if (SQLite_reader != null)
-            {
-                while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
-                // находимся до тех пор, пока не закроется 
+            //if (SQLite_reader != null)
+            //{
+            // while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
+            // находимся до тех пор, пока не закроется 
 
-            }
-            if (SQLite_reader == null || SQLite_reader.IsClosed)
-            {
-                SQLite_Command_text = "SELECT * FROM Race_languages ORDER BY ID";
+            //}
+            //if (SQLite_reader == null || SQLite_reader.IsClosed)
+            //{
+            SQLite_Command_text = "SELECT * FROM Race_languages ORDER BY ID";
                 SQLite_command = new SQLiteCommand(SQLite_Command_text, SQLite_connection);
 
                 SQLite_reader = SQLite_command.ExecuteReader();
@@ -65,27 +65,17 @@ namespace Races_libs
                         first_run = false;
                     }
                     int index;
-                    index = 0;
-
+                    
                     // Здесь такая реализация, потому что на каждый столбец идет считывание всех строк, относящихся к этому столбцу
                     foreach (string coloumn_name in Race_languages_coloumn_name)
                     {
                         temp_object = SQLite_reader[coloumn_name];
+                        index = Race_languages_coloumn_name.IndexOf(coloumn_name);
 
-                        for (; index < Languages.Capacity;)
-                        {
-                            if (!(temp_object is DBNull)) { Languages[index].Add(Convert.ToInt32(temp_object)); } else { Languages[index].Add(0); }
-                            break;
-                        }
-                        index = index + 1;
-                        if (index == Languages.Capacity)
-                        {
-                            break;
-                        }
-
+                        if (!(temp_object is DBNull)) { Languages[index].Add(Convert.ToInt32(temp_object)); } else { Languages[index].Add(0); }
                     }
                 }
-            }
+            //}
         }
     }
 }

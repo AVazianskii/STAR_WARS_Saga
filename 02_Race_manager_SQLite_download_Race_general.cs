@@ -29,17 +29,17 @@ namespace Races_libs
         #endregion
         private void Run_download_Race_general()
         {
-            
 
-            if (SQLite_reader != null)
-            {
-                while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
-                // находимся до тех пор, пока не закроется 
 
-            }
-            if (SQLite_reader == null || SQLite_reader.IsClosed)
-            {
-                SQLite_Command_text = "SELECT * FROM Race_general ORDER BY ID";
+            //if (SQLite_reader != null)
+            //{
+            //while (!(SQLite_reader.IsClosed)) {; } // Если обращение к базе еще не закрыто, то паданем в пустой цикл, в котором
+            // находимся до тех пор, пока не закроется 
+
+            //}
+            //if (SQLite_reader == null) //|| SQLite_reader.IsClosed
+            //{
+            SQLite_Command_text = "SELECT * FROM Race_general ORDER BY ID";
                 SQLite_command = new SQLiteCommand(SQLite_Command_text, SQLite_connection);
                 SQLite_reader = SQLite_command.ExecuteReader();
                 while (SQLite_reader.Read())
@@ -72,9 +72,9 @@ namespace Races_libs
                     if (!(temp_object is System.DBNull)) { Feature_5.Add((string)SQLite_reader["Особенность_5"]); } else { Feature_5.Add(""); }
                     temp_object = SQLite_reader["Особенность_6"];
                     if (!(temp_object is System.DBNull)) { Feature_6.Add((string)SQLite_reader["Особенность_6"]); } else { Feature_6.Add(""); }
-                }
+                //}
             }
-            
+
         }
     }
 }

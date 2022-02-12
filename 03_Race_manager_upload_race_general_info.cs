@@ -13,7 +13,7 @@ namespace Races_libs
             // Устанавливаем конфигурационные поля объектов Рас при помощи прочитанной из базы информации
             foreach(Race_class Race in _Races)
             {
-                int index = Race.Get_race_code();
+                int index = Race.Get_race_code();    // _Races.IndexOf(Race);
                 Race.Set_general_description(General_description[index]);
                 Race.Set_personal_properties(Personal_properties[index]);
                 Race.Set_physical_properties(Physical_properties[index]);

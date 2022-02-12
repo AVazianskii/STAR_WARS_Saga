@@ -12,17 +12,23 @@ namespace Races_libs
         {
             foreach(Race_class Race in _Races)
             {
-                foreach(string language in Language_1)
+                foreach(string race_language in Race_languages_coloumn_name)
                 {
-                    if (language != "")
+                    if (Race.Get_language_1() == race_language)
                     {
-                        foreach(string race_language in Race_languages_coloumn_name)
-                        {
-                            if (language == race_language)
-                            {
-                                Race.Set_language_1_lvl(Languages[Race_languages_coloumn_name.IndexOf(race_language)][_Races.IndexOf(Race)]);
-                            }
-                        }
+                        Race.Set_language_1_lvl(Languages[Race_languages_coloumn_name.IndexOf(race_language)][_Races.IndexOf(Race)]);
+                    }
+                    if (Race.Get_language_2() == race_language)
+                    {
+                        Race.Set_language_2_lvl(Languages[Race_languages_coloumn_name.IndexOf(race_language)][_Races.IndexOf(Race)]);
+                    }
+                    if (Race.Get_language_3() == race_language)
+                    {
+                        Race.Set_language_3_lvl(Languages[Race_languages_coloumn_name.IndexOf(race_language)][_Races.IndexOf(Race)]);
+                    }
+                    if (Race.Get_language_4() == race_language)
+                    {
+                        Race.Set_language_4_lvl(Languages[Race_languages_coloumn_name.IndexOf(race_language)][_Races.IndexOf(Race)]);
                     }
                 }
             }
