@@ -17,8 +17,6 @@ namespace Races_libs
             SQLiteConnection SQLite_conn;
             SQLiteDataReader SQLite_reader;
             bool first_run;
-            int temp_int;
-            string temp_string;
             List<List<string>> temp_string_list;
             List<List<int>> temp_int_list;
 
@@ -49,12 +47,12 @@ namespace Races_libs
                     temp_object = SQLite_reader[coloumn_name];
                     index = Names_of_coloumns.IndexOf(coloumn_name);
 
-                    if (reading_data_type == 0)
+                    if (reading_data_type == (int)Type_of_var.string_type)
                     {
                         temp_string_list = (List<List<string>>)List_for_reading_data;
                         if (!(temp_object is DBNull)) { temp_string_list[index].Add(Convert.ToString(temp_object)); } else { temp_string_list[index].Add(""); }
                     }
-                    else if(reading_data_type == 1)
+                    else if(reading_data_type == (int)Type_of_var.int_type)
                     {
                         temp_int_list = (List<List<int>>)List_for_reading_data;
                         if (!(temp_object is DBNull)) { temp_int_list[index].Add(Convert.ToInt32(temp_object)); } else { temp_int_list[index].Add(0); }
