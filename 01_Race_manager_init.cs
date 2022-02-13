@@ -83,6 +83,16 @@ namespace Races_libs
         private List<List<int>> Languages; // инициализация коллекции различных языков
         private List<string> Race_languages_coloumn_name; // инициализация коллекции столбцов в таблице по уровням знания языков у рас
         #endregion
+        #region инициализация коллекции расовых бонусов атрибутов
+        private List<int> Strength_bonus;
+        private List<int> Agility_bonus;
+        private List<int> Stamina_bonus;
+        private List<int> Perception_bonus;
+        private List<int> Quickness_bonus;
+        private List<int> Intelligence_bonus;
+        private List<int> Charm_bonus;
+        private List<int> Willpower_bonus;
+        #endregion
         List<string> Race_skill_bonus_coloumn_name;
         List<List<int>> Race_skills_bonus;
         List<string> Race_attributes_bonus_coloumn_name;

@@ -12,15 +12,15 @@ namespace Races_libs
         {
             foreach(Race_class Race in _Races)
             {
-                int index = Race.Get_race_code();
-                Race.Set_race_bonus_strength    (Race_attributes_bonus[0][index]);
-                Race.Set_race_bonus_agility     (Race_attributes_bonus[1][index]);
-                Race.Set_race_bonus_stamina     (Race_attributes_bonus[2][index]);
-                Race.Set_race_bonus_perception  (Race_attributes_bonus[3][index]);
-                Race.Set_race_bonus_quickness   (Race_attributes_bonus[4][index]);
-                Race.Set_race_bonus_intelligence(Race_attributes_bonus[5][index]);
-                Race.Set_race_bonus_charm       (Race_attributes_bonus[6][index]);
-                Race.Set_race_bonus_willpower   (Race_attributes_bonus[7][index]);
+                int index = _Races.IndexOf(Race);// Race.Get_race_code()
+                Race.Set_race_bonus_strength    (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Strength_bonus)][index]);
+                Race.Set_race_bonus_agility     (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Agility_bonus)][index]);
+                Race.Set_race_bonus_stamina     (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Stamina_bonus)][index]);
+                Race.Set_race_bonus_perception  (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Perception_bonus)][index]);
+                Race.Set_race_bonus_quickness   (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Quickness_bonus)][index]);
+                Race.Set_race_bonus_intelligence(Race_attributes_bonus[Race_attributes_bonus.IndexOf(Intelligence_bonus)][index]);
+                Race.Set_race_bonus_charm       (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Charm_bonus)][index]);
+                Race.Set_race_bonus_willpower   (Race_attributes_bonus[Race_attributes_bonus.IndexOf(Willpower_bonus)][index]);
             }
         }
     }

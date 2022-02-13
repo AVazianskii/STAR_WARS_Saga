@@ -118,6 +118,28 @@ namespace Races_libs
             Languages.Add(Sullu_lang);
             Languages.Add(Zabrak_lang);
             #endregion
+            #region инициализация коллекции расовых бонусов атрибутов
+            Strength_bonus = new List<int>();
+            Agility_bonus = new List<int>();
+            Stamina_bonus = new List<int>();
+            Perception_bonus = new List<int>();
+            Quickness_bonus = new List<int>();
+            Intelligence_bonus = new List<int>();
+            Charm_bonus = new List<int>();
+            Willpower_bonus = new List<int>();
+            #endregion
+            #region инициализация коллекции коллекций расовых бонусов атрибутов
+            Race_attributes_bonus = new List<List<int>>();
+            Race_attributes_bonus.Add(Strength_bonus);
+            Race_attributes_bonus.Add(Agility_bonus);
+            Race_attributes_bonus.Add(Stamina_bonus);
+            Race_attributes_bonus.Add(Perception_bonus);
+            Race_attributes_bonus.Add(Quickness_bonus);
+            Race_attributes_bonus.Add(Intelligence_bonus);
+            Race_attributes_bonus.Add(Charm_bonus);
+            Race_attributes_bonus.Add(Willpower_bonus);
+            #endregion
+
 
             SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Races_Libs\SW_Race_manager\Races.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
@@ -127,7 +149,7 @@ namespace Races_libs
             Race_skill_bonus_coloumn_name = new List<string>();
             Race_skills_bonus = new List<List<int>>();
             Race_attributes_bonus_coloumn_name = new List<string>();
-            Race_attributes_bonus = new List<List<int>>();
+            
 
         }
     }

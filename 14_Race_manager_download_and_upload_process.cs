@@ -24,11 +24,11 @@ namespace Races_libs
             // 1. Создать поля и методы для чтения\записи бонусов того или иного навыка в шаблоне рас
             // 2. Почистить неактуальные поля и методы в шаблоне рас + в объектах рас
             // 3. Сделать перекладку считанной информации в конфигурационные поля рас
-            Run_download_from_SQLite("SELECT * FROM Race_skill_bonus ORDER BY ID",
-                                      SQLite_connection,
-                                      Race_skill_bonus_coloumn_name,
-                                      Race_skills_bonus,
-                                      (int)Type_of_var.int_type);
+            //Run_download_from_SQLite("SELECT * FROM Race_skills_bonus ORDER BY ID",
+            //SQLite_connection,
+            //Race_skill_bonus_coloumn_name,
+            //Race_skills_bonus,
+            //(int)Type_of_var.int_type);
 
             Run_download_from_SQLite("SELECT * FROM Race_attributes_bonus ORDER BY ID",
                                      SQLite_connection,
