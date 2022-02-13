@@ -70,13 +70,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="05_Race_manager_Method_upload_languages_info.cs" />
+    <Compile Include="04_Race_manager_Method_upload_languages_info.cs" />
+    <Compile Include="06_Race_manager_Method_Upload_race_attributes_bonus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="15_Race_manager_constructor.cs" />
     <Compile Include="14_Race_manager_download_and_upload_process.cs" />
     <Compile Include="01_Race_manager_init.cs" />
     <Compile Include="03_Race_manager_Method_upload_race_general_info.cs" />
     <Compile Include="02_Race_manger_Method_run_download_from_SQLite.cs" />
+    <Compile Include="05_Race_manager_Method_upload_race_skill_bonus.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

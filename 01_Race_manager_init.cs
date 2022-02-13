@@ -83,5 +83,9 @@ namespace Races_libs
         private List<List<int>> Languages; // инициализация коллекции различных языков
         private List<string> Race_languages_coloumn_name; // инициализация коллекции столбцов в таблице по уровням знания языков у рас
         #endregion
+        List<string> Race_skill_bonus_coloumn_name;
+        List<List<int>> Race_skills_bonus;
+        List<string> Race_attributes_bonus_coloumn_name;
+        List<List<int>> Race_attributes_bonus;
     }
 }

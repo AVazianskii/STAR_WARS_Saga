@@ -124,8 +124,11 @@ namespace Races_libs
             
             Race_general_info_coloumn_name = new List<string>();
             Race_languages_coloumn_name = new List<string>();
+            Race_skill_bonus_coloumn_name = new List<string>();
+            Race_skills_bonus = new List<List<int>>();
+            Race_attributes_bonus_coloumn_name = new List<string>();
+            Race_attributes_bonus = new List<List<int>>();
 
-            
         }
     }
 }
