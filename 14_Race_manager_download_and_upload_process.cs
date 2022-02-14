@@ -36,12 +36,19 @@ namespace Races_libs
                                      Race_attributes_bonus,
                                      (int)Type_of_var.int_type);
 
+            Run_download_from_SQLite("SELECT * FROM Race_age_statuses ORDER BY ID",
+                                     SQLite_connection,
+                                     Race_age_statuses_coloumn_name,
+                                     Race_age_statuses,
+                                     (int)Type_of_var.int_type);
+
             SQLite_connection.Close();
 
             Upload_general_info();       // Перекладываем считанные данные в конфигурационные поля объектов рас 
             Upload_languages_info();
             Upload_race_skill_bonus();
             Upload_race_attributes_bonus();
+            Upload_race_age_statuses();
         }
     }
 }

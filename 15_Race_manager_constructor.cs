@@ -139,6 +139,33 @@ namespace Races_libs
             Race_attributes_bonus.Add(Charm_bonus);
             Race_attributes_bonus.Add(Willpower_bonus);
             #endregion
+            #region инициализация коллекции расовых границ для определения возрастного статуса персонажа
+            Child_min_age = new List<int>();
+            Child_max_age = new List<int>();
+            Teen_min_age = new List<int>();
+            Teen_max_age = new List<int>();
+            Adult_min_age = new List<int>();
+            Adult_max_age = new List<int>();
+            Middle_min_age = new List<int>();
+            Middle_max_age = new List<int>();
+            Old_min_age = new List<int>();
+            Old_max_age = new List<int>();
+            Eldery_min_age = new List<int>();
+            #endregion
+            #region инициализация коллекции коллекций расовых границ для определения возрастного статуса персонажа
+            Race_age_statuses = new List<List<int>>();
+            Race_age_statuses.Add(Child_min_age);
+            Race_age_statuses.Add(Child_max_age);
+            Race_age_statuses.Add(Teen_min_age);
+            Race_age_statuses.Add(Teen_max_age);
+            Race_age_statuses.Add(Adult_min_age);
+            Race_age_statuses.Add(Adult_max_age);
+            Race_age_statuses.Add(Middle_min_age);
+            Race_age_statuses.Add(Middle_max_age);
+            Race_age_statuses.Add(Old_min_age);
+            Race_age_statuses.Add(Old_max_age);
+            Race_age_statuses.Add(Eldery_min_age);
+            #endregion
 
 
             SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Races_Libs\SW_Race_manager\Races.db;Version=3;";
@@ -149,7 +176,8 @@ namespace Races_libs
             Race_skill_bonus_coloumn_name = new List<string>();
             Race_skills_bonus = new List<List<int>>();
             Race_attributes_bonus_coloumn_name = new List<string>();
-            
+            Race_age_statuses_coloumn_name = new List<string>();
+
 
         }
     }

@@ -93,9 +93,24 @@ namespace Races_libs
         private List<int> Charm_bonus;
         private List<int> Willpower_bonus;
         #endregion
+        #region
+        private List<int> Child_min_age;
+        private List<int> Child_max_age;
+        private List<int> Teen_min_age;
+        private List<int> Teen_max_age;
+        private List<int> Adult_min_age;
+        private List<int> Adult_max_age;
+        private List<int> Middle_min_age;
+        private List<int> Middle_max_age;
+        private List<int> Old_min_age;
+        private List<int> Old_max_age;
+        private List<int> Eldery_min_age;
+        #endregion
         List<string> Race_skill_bonus_coloumn_name;
         List<List<int>> Race_skills_bonus;
         List<string> Race_attributes_bonus_coloumn_name;
         List<List<int>> Race_attributes_bonus;
+        List<string> Race_age_statuses_coloumn_name;
+        List<List<int>> Race_age_statuses;
     }
 }

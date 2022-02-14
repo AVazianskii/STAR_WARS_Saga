@@ -79,6 +79,7 @@
     <Compile Include="03_Race_manager_Method_upload_race_general_info.cs" />
     <Compile Include="02_Race_manger_Method_run_download_from_SQLite.cs" />
     <Compile Include="05_Race_manager_Method_upload_race_skill_bonus.cs" />
+    <Compile Include="Race_manager_Method_upload_race_age_statuses.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
