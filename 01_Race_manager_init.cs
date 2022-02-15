@@ -33,11 +33,7 @@ namespace Races_libs
         private string SQLite_connection_string;
         private SQLiteConnection SQLite_connection;
         #endregion
-        enum Type_of_var
-        {
-            string_type,
-            int_type
-        }
+
         #region инициализация коллекции коллекций общего описания рас
         private List<List<string>> Race_description;
         private List<string> Race_general_info_coloumn_name;
@@ -103,7 +99,7 @@ namespace Races_libs
         private List<int> Old_max_age;
         private List<int> Eldery_min_age;
         #endregion
-        #region инициализация коллекции расовых границ для определения возрастного статуса
+        #region инициализация коллекции расовых бонусов боевых параметров
         private List<int> Reaction_bonus;
         private List<int> Armor_bonus;
         private List<int> Stealthiness_combat_bonus;
@@ -171,5 +167,30 @@ namespace Races_libs
         List<List<int>> Race_age_statuses;
         List<string> Race_combat_parameters_coloumn_name;
         List<List<int>> Race_combat_parameters;
+
+        public enum enum_Races // перечисляем порядок рас по порядку, начиная с 0
+        {
+            _Empty_race,     // 0
+            _Human,          // 1
+            _Botan,          // 2
+            _Cereanin,       // 3
+            _Duro,           // 4
+            _Evok,           // 5
+            _Gamor,          // 6
+            _Gungan,         // 7
+            _Kel_dor,        // 8 
+            _Mon_kalamari,   // 9 
+            _Rodian,         // 10
+            _Sullu,          // 11
+            _Trando,         // 12
+            _Tvilek,         // 13
+            _Wooki,          // 14
+            _Zabrak          // 15
+        }
+        enum Type_of_var
+        {
+            string_type,
+            int_type
+        }
     }
 }
