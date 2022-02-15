@@ -58,8 +58,6 @@ namespace Races_libs
         private List<string> Feature_5;
         private List<string> Feature_6;
         private List<string> Feature_7;
-
-
         #endregion
 
         #region инициализация коллекций языков рас
@@ -93,7 +91,7 @@ namespace Races_libs
         private List<int> Charm_bonus;
         private List<int> Willpower_bonus;
         #endregion
-        #region
+        #region инициализация коллекции расовых границ для определения возрастного статуса
         private List<int> Child_min_age;
         private List<int> Child_max_age;
         private List<int> Teen_min_age;
@@ -106,11 +104,21 @@ namespace Races_libs
         private List<int> Old_max_age;
         private List<int> Eldery_min_age;
         #endregion
+        #region инициализация коллекции расовых границ для определения возрастного статуса
+        private List<int> Reaction_bonus;
+        private List<int> Armor_bonus;
+        private List<int> Stealthiness_combat_bonus;
+        private List<int> Watchfulness_combat_bonus;
+        private List<int> Force_resist_bonus;
+        private List<int> Flow_control_bonus;
+        #endregion
         List<string> Race_skill_bonus_coloumn_name;
         List<List<int>> Race_skills_bonus;
         List<string> Race_attributes_bonus_coloumn_name;
         List<List<int>> Race_attributes_bonus;
         List<string> Race_age_statuses_coloumn_name;
         List<List<int>> Race_age_statuses;
+        List<string> Race_combat_parameters_coloumn_name;
+        List<List<int>> Race_combat_parameters;
     }
 }

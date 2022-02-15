@@ -166,7 +166,23 @@ namespace Races_libs
             Race_age_statuses.Add(Old_max_age);
             Race_age_statuses.Add(Eldery_min_age);
             #endregion
-
+            #region инициализация коллекции расовых расовых боевых параметров
+            Reaction_bonus = new List<int>();
+            Armor_bonus = new List<int>();
+            Stealthiness_combat_bonus = new List<int>();
+            Watchfulness_combat_bonus = new List<int>();
+            Force_resist_bonus = new List<int>();
+            Flow_control_bonus = new List<int>();
+            #endregion
+            #region инициализация коллекции коллекций расовых боевых параметров
+            Race_combat_parameters = new List<List<int>>();
+            Race_combat_parameters.Add(Reaction_bonus);
+            Race_combat_parameters.Add(Armor_bonus);
+            Race_combat_parameters.Add(Stealthiness_combat_bonus);
+            Race_combat_parameters.Add(Watchfulness_combat_bonus);
+            Race_combat_parameters.Add(Force_resist_bonus);
+            Race_combat_parameters.Add(Flow_control_bonus);
+            #endregion
 
             SQLite_connection_string = @"Data Source=D:\STAR WARS Saga\Character_creation\Races_Libs\SW_Race_manager\Races.db;Version=3;";
             SQLite_connection = new SQLiteConnection(SQLite_connection_string);
@@ -177,6 +193,7 @@ namespace Races_libs
             Race_skills_bonus = new List<List<int>>();
             Race_attributes_bonus_coloumn_name = new List<string>();
             Race_age_statuses_coloumn_name = new List<string>();
+            Race_combat_parameters_coloumn_name = new List<string>();
 
 
         }
