@@ -59,7 +59,6 @@ namespace Races_libs
         private List<string> Feature_6;
         private List<string> Feature_7;
         #endregion
-
         #region инициализация коллекций языков рас
         private List<int> Galactic_lang;
         private List<int> Botan_lang;
@@ -111,6 +110,58 @@ namespace Races_libs
         private List<int> Watchfulness_combat_bonus;
         private List<int> Force_resist_bonus;
         private List<int> Flow_control_bonus;
+        #endregion
+        #region инициализация коллекции расовых бонусов навыков
+        private List<int> Swimming_bonus,
+                    Heavy_athletics_bonus,
+                    Climbing_bonus,
+                    Light_athletics_bonus,
+                    Sleight_of_hand_bonus,
+                    Stealthiness_bonus,
+                    Acrobatics_bonus,
+                    Horse_riding_bonus,
+                    Light_saber_fighting_bonus,
+                    Hand_combat_bonus,
+                    Usual_saber_fighting_bonus,
+                    Evasion_bonus,
+                    Throwing_bonus,
+                    Lips_reading_bonus,
+                    Old_weapon_bonus,
+                    Light_weapon_bonus,
+                    Heavy_weapon_bonus,
+            Sniper_weapon_bonus,
+            Musicality_bonus,
+            Riding_bonus,
+            Resisting_bonus,
+            Strength_of_mind_bonus,
+            Watchfulness_bonus,
+            Pilot_bonus,
+            Programming_bonus,
+            Surviving_bonus,
+            Reapair_bonus,
+            Training_bonus,
+            Medicine_crafting_bonus,
+            Science_bonus,
+            Engineering_bonus,
+            Star_wars_tactic_bonus,
+            Crafting_bonus,
+            Trading_bonus,
+            Astronavigation_bonus,
+            Change_looking_bonus,
+            Light_saber_crafting_bonus,
+            Exploding_bonus,
+            Security_bonus,
+            Medicine_bonus,
+            Language_bonus,
+            Knowledge_bonus,
+            Dancing_bonus,
+            Interrogation_bonus,
+            Diplomacy_bonus,
+            Leadership_bonus,
+            Singing_bonus,
+            Deception_bonus,
+            Insight_bonus,
+            Seduction_bonus;
         #endregion
         List<string> Race_skill_bonus_coloumn_name;
         List<List<int>> Race_skills_bonus;
