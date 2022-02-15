@@ -168,6 +168,7 @@ namespace Races_libs
         List<string> Race_combat_parameters_coloumn_name;
         List<List<int>> Race_combat_parameters;
 
+
         public enum enum_Races // перечисляем порядок рас по порядку, начиная с 0
         {
             _Empty_race,     // 0
